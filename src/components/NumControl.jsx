@@ -31,7 +31,7 @@ const KEYS = [
         {KEYS.map((key, index) => (
           <div
             className={`border active:bg-white transition-all border-gray-400 w-full h-full flex justify-center items-center cursor-pointer ${
-              key.text === "0" ? "col-span-2" : ""
+              key.text === 0 &&"col-span-2 "
             }`}
             onClick={() => handleClick(key.value)}
             key={index}
