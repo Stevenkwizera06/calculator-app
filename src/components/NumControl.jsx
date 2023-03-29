@@ -2,26 +2,26 @@ const KEYS = [
     { text: "AC", value: "AC" },
     { text: "+/-", value: "-" },
     { text: "%", value: "%" },
-    ...[...Array(10).keys()].reverse().map((k) => ({ text: k, value: k })),
+    ...[...Array(10).keys()].reverse().map((element) => ({ text: element, value: element })),
     { text: ".", value: "." },
   ];
   
-  const NumControl = ({ setOperation, onReset, setResult, setValue, value, operation }) => {
-    const handleClick = (kValue = "") => {
+  const NumberControl = ({ setOperation, onReset, setResult, setValue, value, operation }) => {
+    const handleClick = (elementValue = "") => {
       setResult(null);
-      if (kValue === "AC") onReset();
-      else if (kValue === "%") {
+      if (elementValue === "AC") onReset();
+      else if (elementValue === "%") {
         if (operation.length < 1 && value) {
-          setOperation([value, kValue]);
+          setOperation([value, elementValue]);
           setValue("");
         }
       } else {
         setValue((value) =>
           value
-            ? `${value}${kValue === "." && value.toString().indexOf(".") !== -1 ? "" : kValue}`
-            : kValue === "."
+            ? `${value}${elementValue === "." && value.toString().indexOf(".") !== -1 ? "" : elementValue}`
+            : elementValue === "."
             ? "0."
-            : kValue
+            : elementValue
         );
       }
     };
@@ -43,5 +43,5 @@ const KEYS = [
     );
   };
   
-  export default NumControl;
+  export default NumberControl;
   

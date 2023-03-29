@@ -1,17 +1,17 @@
 const KEYS = [  { text: "÷", value: "/" },  { text: "x", value: "*" },  { text: "-", value: "-" },  { text: "+", value: "+" },  { text: "=", value: "=" },];
 
 const Operators = ({ setOperation, getResult, setLatestValue, latestValue, operation }) => {
-  const handleClick = (kValue) => {
+  const handleClick = (operatorValue) => {
     if (latestValue || operation[operation.length - 1]) {
-      setOperation((v) =>
-        !isNaN(v[v.length - 1]) && Number(latestValue)
-          ? v.length < 2
+      setOperation((value) =>
+        !isNaN(value[value.length - 1]) && Number(latestValue)
+          ? value.length < 2
             ? [latestValue]
-            : [...v.slice(0, -1)]
-          : [...v, latestValue]
+            : [...value.slice(0, -1)]
+          : [...value, latestValue]
       );
-      if (kValue === "=") getResult();
-      else setOperation((ops) => [...ops, kValue]);
+      if (operatorValue === "=") getResult();
+      else setOperation((operations) => [...operations, operatorValue]);
       setLatestValue(null);
     }
   };

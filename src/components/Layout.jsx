@@ -16,12 +16,19 @@ const Layout = () => {
 
   const getResult = () => {
     const operationString = [...operation, latestValue].join(' ');
-    // eslint-disable-next-line no-new-func
-    const operationFunc = new Function(`return ${operationString}`);
-  
-    const res = operationFunc();
-    setResult(res);
-    setOperation([res]);
+    
+    let response
+    try{
+
+      // eslint-disable-next-line no-new-func
+      const operationFunction = new Function(`return ${operationString}`);
+       response = operationFunction();
+    }
+    catch(error){
+    
+    }
+    setResult(response);
+    setOperation([response]);
   };
 
   return (
