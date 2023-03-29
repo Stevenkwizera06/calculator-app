@@ -26,7 +26,7 @@ const Layout = () => {
 
   return (
     <div className='bg-black h-screen '>
-      <div className='bg-white h-[90%] w-full sm:w-[500px] m-auto grid grid-rows-[160px,1fr] grid-cols-4'>
+      <div className='bg-white h-[90%] w-full sm:w-[500px] m-auto grid grid-rows-[162px,1fr] grid-cols-4'>
         <Displayer value={result || latestValue || operation.at(-1)} />
         <NumControl
           setValue={setLatestValue}

@@ -21,7 +21,7 @@ const Operators = ({ setOperation, getResult, setLatestValue, latestValue, opera
       {KEYS.map((key, index) => (
         <div
           onClick={() => handleClick(key.value)}
-          className="border active:bg-orange-500 transition-all border-gray-400 w-full h-full flex justify-center items-center cursor-pointer"
+          className="border active:bg-orange-400 transition-all border-gray-400 w-full h-full flex justify-center items-center cursor-pointer"
           key={index}
         >
           {key.text}

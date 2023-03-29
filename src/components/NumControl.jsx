@@ -27,7 +27,7 @@ const KEYS = [
     };
   
     return (
-      <div className="bg-gray-200 text-2xl h-full col-span-3 grid grid-cols-3 grid-rows-5 place-items-center font-bold">
+      <div className="bg-gray-300 text-2xl h-full col-span-3 grid grid-cols-3 grid-rows-5 place-items-center font-bold">
         {KEYS.map((key, index) => (
           <div
             className={`border active:bg-white transition-all border-gray-400 w-full h-full flex justify-center items-center cursor-pointer ${
