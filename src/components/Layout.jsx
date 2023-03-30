@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import Displayer from './Displayer'
-import NumControl from './NumControl'
+import NumControl from './NumberControl'
 import Operators from './Operators'
 
 const Layout = () => {
